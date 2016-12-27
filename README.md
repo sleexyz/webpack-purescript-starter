@@ -20,19 +20,19 @@ Because of this, we've chosen an unorthodox file hierarchy that explicitly highl
 
 <br/>
 
-#### `./src0/` - Purescript
+#### [`./src0/`](./src0) - Purescript
 
-These files get compiled to Javascript for the next stage in `./src1/_gen/` via **psc**.
-
-<br/>
-
-#### `./src1/` - Javascript and more
-
-These files get bundled into static assets for the next stage in `./src2/_gen/` via **webpack**.
+These files get compiled to Javascript for the next stage in [`./src1/_gen/`](./src1/_gen) via **psc**.
 
 <br/>
 
-#### `./src2/` - Static assets
+#### [`./src1/`](./src1) - Javascript and more
+
+These files get bundled into static assets for the next stage in [`./src2/_gen/`](./src2/_gen) via **webpack**.
+
+<br/>
+
+#### [`./src2/`](./src2) - Static assets
 
 These files are served and then interpreted by your client's **web browser**.
 
