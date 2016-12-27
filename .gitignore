@@ -1,0 +1,3 @@
+src*/_gen/*
+!src*/_gen/README.md
+node_modules/

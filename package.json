@@ -1,0 +1,17 @@
+{
+  "name": "webpack-purescript-starter",
+  "version": "0.0.0",
+  "scripts": {
+    "build": "yarn run psc-build && yarn run webpack-build",
+    "clean": "yarn run psc-clean && yarn run webpack-clean",
+    "psc": "yarn run psc-clean && yarn run psc-build",
+    "psc-build": "shopt -s globstar; psc ./src0/**/*.purs --output='./src1/_gen' --source-maps",
+    "psc-clean": "bash -O extglob -c 'rm -rf ./src1/_gen/!(README.md)'",
+    "webpack": "yarn run webpack-clean && yarn run webpack-build",
+    "webpack-build": "webpack",
+    "webpack-clean": "bash -O extglob -c 'rm -rf ./src2/_gen/!(README.md)'"
+  },
+  "devDependencies": {
+    "webpack": "^1.14.0"
+  }
+}
